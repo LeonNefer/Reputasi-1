@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f8fc">
+  <title>Masuk · CoolSmartGames</title>
+  <link rel="icon" href="assets/coolsmartgames-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-art" aria-label="CoolSmartGames, teman belajar keluarga">
+      <a class="brand brand-on-art" href="index.html"><img class="brand-logo" src="assets/coolsmartgames-logo.png" alt=""> CoolSmartGames</a>
+      <div class="art-copy">
+        <p class="eyebrow">TEMANI LANGKAH KECILNYA</p>
+        <h1>Belajar hari ini,<br><em>bertumbuh</em> esok hari.</h1>
+        <p>Pantau proses belajarnya dan temukan cara terbaik untuk mendukungnya di rumah.</p>
+      </div>
+      <svg class="school-scene" viewBox="0 0 680 360" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Ilustrasi sekolah di bukit hijau">
+        <circle cx="130" cy="83" r="48" fill="#f7cf6a"/><circle cx="130" cy="83" r="68" fill="#f7cf6a" opacity=".18"/>
+        <path d="M0 210c105-62 184-40 278-5 111 42 198 21 402-42v197H0z" fill="#b6dec9"/>
+        <path d="M0 251c113-53 233-14 338 14 97 26 188 3 342-45v145H0z" fill="#76bd99"/>
+        <path d="M0 296c105-33 201-8 298 14 111 25 226 11 382-31v86H0z" fill="#429b78"/>
+        <g fill="#fff" opacity=".9"><path d="M410 70c2-21 20-35 42-31 12-23 49-20 56 7 25-1 34 37 8 44h-92c-17-1-22-9-14-20z"/><path d="M530 151c2-16 15-25 30-22 10-17 35-15 40 5 18-1 25 27 6 33h-65c-13-1-17-7-11-16z"/></g>
+        <g transform="translate(430 138)"><path d="M0 68 89 18l88 50z" fill="#2f70bf"/><path d="M17 68h143v75H17z" fill="#fff"/><path d="M69 102h28v41H69z" fill="#2f70bf"/><path d="M0 68h177" stroke="#245b9c" stroke-width="4"/><path d="M89 18V-9" stroke="#263958" stroke-width="4"/><path d="M93-8h29L93 5z" fill="#f2bd4c"/></g>
+        <g transform="translate(69 190)"><path d="M23 77V20" stroke="#966c44" stroke-width="13"/><circle cx="23" cy="8" r="32" fill="#2b8a66"/><circle cx="0" cy="28" r="27" fill="#319573"/><circle cx="46" cy="28" r="26" fill="#2f8c69"/></g>
+        <g transform="translate(245 270)"><rect x="0" y="0" width="104" height="17" rx="4" fill="#2f70bf"/><rect x="9" y="-17" width="104" height="17" rx="4" fill="#45a17a"/><rect x="17" y="-34" width="104" height="17" rx="4" fill="#2f70bf"/><path d="M121-34v17m-8-17v17" stroke="#f3c55b" stroke-width="4"/></g>
+        <path d="M360 289l71-42 10 15-71 42-17 5z" fill="#f3bf59"/><path d="m353 309 17-5-10-15z" fill="#263958"/>
+      </svg>
+    </section>
+    <section class="auth-panel">
+      <a class="brand brand-mobile" href="index.html"><img class="brand-logo" src="assets/coolsmartgames-logo.png" alt=""> CoolSmartGames</a>
+      <div class="auth-card">
+        <div class="auth-heading">
+          <p class="eyebrow" id="auth-eyebrow">SELAMAT DATANG KEMBALI</p>
+          <h2 id="auth-title">Senang melihatmu lagi.</h2>
+          <p id="auth-description">Masuk untuk melihat perjalanan belajar anak hari ini.</p>
+        </div>
+        <div class="notice notice-info hidden" id="setup-notice" role="status">
+          <strong>Mode pratinjau</strong>
+          <span>Tambahkan URL dan publishable key Supabase di <code>supabase-config.js</code> untuk mengaktifkan akun sungguhan.</span>
+        </div>
+        <div class="notice notice-success hidden" id="auth-message" role="status"></div>
+        <form id="auth-form" novalidate>
+          <label class="field hidden" id="name-field">Nama orang tua<input name="name" type="text" autocomplete="name" placeholder="Contoh: Bu Rani"></label>
+          <label class="field">Email<input name="email" type="email" autocomplete="email" placeholder="nama@email.com" required></label>
+          <label class="field">Kata sandi
+            <span class="input-wrap"><input name="password" type="password" autocomplete="current-password" placeholder="Masukkan kata sandi" required minlength="6"><button type="button" class="input-action" id="toggle-password" aria-label="Tampilkan kata sandi" aria-pressed="false"><svg class="eye-icon eye-icon-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.25 12s3.5-6 9.75-6 9.75 6 9.75 6-3.5 6-9.75 6-9.75-6-9.75-6Z"/><circle cx="12" cy="12" r="2.5"/></svg><svg class="eye-icon eye-icon-closed" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3 21 21"/><path d="M10.6 10.6a2 2 0 0 0 2.8 2.8"/><path d="M9.9 5.2A10.2 10.2 0 0 1 12 5c6.3 0 9.8 7 9.8 7a16.7 16.7 0 0 1-3.3 4.1"/><path d="M6.6 6.6C3.55 8.3 2.2 12 2.2 12s3.5 7 9.8 7c1.6 0 3.1-.4 4.4-1.05"/></svg></button></span>
+          </label>
+          <div class="auth-error hidden" id="auth-error" role="alert"></div>
+          <button class="button button-primary button-wide" id="submit-auth" type="submit">Masuk ke akun</button>
+        </form>
+        <div class="auth-links">
+          <button class="text-button" id="forgot-password" type="button">Lupa kata sandi?</button>
+          <p id="mode-switch">Belum punya akun? <button class="text-button" id="switch-mode" type="button">Daftar</button></p>
+        </div>
+        <button class="button button-quiet button-wide hidden" id="demo-button" type="button">Lihat pratinjau demo <span aria-hidden="true">↗</span></button>
+        <p class="auth-footnote">Data belajar hanya terlihat oleh akun orang tua yang terhubung.</p>
+      </div>
+      <div class="auth-bottom">Dibuat untuk menemani proses, bukan mengejar kesempurnaan.</div>
+    </section>
+  </main>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
+
